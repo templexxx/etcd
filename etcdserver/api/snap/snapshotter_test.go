@@ -23,9 +23,9 @@ import (
 	"reflect"
 	"testing"
 
-	"go.etcd.io/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/raft/raftpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 var testSnap = &raftpb.Snapshot{

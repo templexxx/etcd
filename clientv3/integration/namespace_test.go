@@ -19,11 +19,11 @@ import (
 	"reflect"
 	"testing"
 
-	"go.etcd.io/etcd/clientv3"
-	"go.etcd.io/etcd/clientv3/namespace"
-	"go.etcd.io/etcd/integration"
-	"go.etcd.io/etcd/mvcc/mvccpb"
-	"go.etcd.io/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/clientv3"
+	"github.com/templexxx/etcd/clientv3/namespace"
+	"github.com/templexxx/etcd/integration"
+	"github.com/templexxx/etcd/mvcc/mvccpb"
+	"github.com/templexxx/etcd/pkg/testutil"
 )
 
 func TestNamespacePutGet(t *testing.T) {

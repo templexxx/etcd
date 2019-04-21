@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"testing"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const (

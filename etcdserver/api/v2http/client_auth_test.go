@@ -30,10 +30,10 @@ import (
 	"strings"
 	"testing"
 
-	"go.etcd.io/etcd/etcdserver/api"
-	"go.etcd.io/etcd/etcdserver/api/v2auth"
+	"github.com/templexxx/etcd/etcdserver/api"
+	"github.com/templexxx/etcd/etcdserver/api/v2auth"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const goodPassword = "good"

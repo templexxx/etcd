@@ -27,20 +27,20 @@ import (
 	"strings"
 	"time"
 
-	"go.etcd.io/etcd/etcdserver"
-	"go.etcd.io/etcd/etcdserver/api"
-	"go.etcd.io/etcd/etcdserver/api/etcdhttp"
-	"go.etcd.io/etcd/etcdserver/api/membership"
-	"go.etcd.io/etcd/etcdserver/api/v2auth"
-	"go.etcd.io/etcd/etcdserver/api/v2error"
-	"go.etcd.io/etcd/etcdserver/api/v2http/httptypes"
-	stats "go.etcd.io/etcd/etcdserver/api/v2stats"
-	"go.etcd.io/etcd/etcdserver/api/v2store"
-	"go.etcd.io/etcd/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/pkg/types"
+	"github.com/templexxx/etcd/etcdserver"
+	"github.com/templexxx/etcd/etcdserver/api"
+	"github.com/templexxx/etcd/etcdserver/api/etcdhttp"
+	"github.com/templexxx/etcd/etcdserver/api/membership"
+	"github.com/templexxx/etcd/etcdserver/api/v2auth"
+	"github.com/templexxx/etcd/etcdserver/api/v2error"
+	"github.com/templexxx/etcd/etcdserver/api/v2http/httptypes"
+	stats "github.com/templexxx/etcd/etcdserver/api/v2stats"
+	"github.com/templexxx/etcd/etcdserver/api/v2store"
+	"github.com/templexxx/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/pkg/types"
 
 	"github.com/jonboulle/clockwork"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const (

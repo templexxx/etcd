@@ -15,11 +15,11 @@
 package auth
 
 import (
-	"go.etcd.io/etcd/auth/authpb"
-	"go.etcd.io/etcd/mvcc/backend"
-	"go.etcd.io/etcd/pkg/adt"
+	"github.com/templexxx/etcd/auth/authpb"
+	"github.com/templexxx/etcd/mvcc/backend"
+	"github.com/templexxx/etcd/pkg/adt"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func getMergedPerms(lg *zap.Logger, tx backend.BatchTx, userName string) *unifiedRangePermissions {

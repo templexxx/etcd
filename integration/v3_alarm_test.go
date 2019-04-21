@@ -22,13 +22,13 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/etcdserver/api/v3rpc/rpctypes"
-	pb "go.etcd.io/etcd/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/mvcc"
-	"go.etcd.io/etcd/mvcc/backend"
-	"go.etcd.io/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/templexxx/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/mvcc"
+	"github.com/templexxx/etcd/mvcc/backend"
+	"github.com/templexxx/etcd/pkg/testutil"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // TestV3StorageQuotaApply tests the V3 server respects quotas during apply

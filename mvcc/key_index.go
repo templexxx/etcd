@@ -20,7 +20,7 @@ import (
 	"fmt"
 
 	"github.com/google/btree"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 var (

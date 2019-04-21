@@ -18,7 +18,7 @@ import (
 	"encoding/binary"
 	"time"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func (s *store) scheduleCompaction(compactMainRev int64, keep map[revision]struct{}) bool {

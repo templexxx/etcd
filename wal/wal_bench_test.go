@@ -19,9 +19,9 @@ import (
 	"os"
 	"testing"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 
-	"go.etcd.io/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/raft/raftpb"
 )
 
 func BenchmarkWrite100EntryWithoutBatch(b *testing.B) { benchmarkWriteEntry(b, 100, 0) }

@@ -18,8 +18,8 @@ import (
 	"context"
 	"sync"
 
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
+	"github.com/templexxx/zap"
+	"github.com/templexxx/zap/zapcore"
 	"google.golang.org/grpc/balancer"
 	"google.golang.org/grpc/resolver"
 )

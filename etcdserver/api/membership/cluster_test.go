@@ -21,13 +21,13 @@ import (
 	"reflect"
 	"testing"
 
-	"go.etcd.io/etcd/etcdserver/api/v2store"
-	"go.etcd.io/etcd/pkg/mock/mockstore"
-	"go.etcd.io/etcd/pkg/testutil"
-	"go.etcd.io/etcd/pkg/types"
-	"go.etcd.io/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/etcdserver/api/v2store"
+	"github.com/templexxx/etcd/pkg/mock/mockstore"
+	"github.com/templexxx/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/pkg/types"
+	"github.com/templexxx/etcd/raft/raftpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func TestClusterMember(t *testing.T) {

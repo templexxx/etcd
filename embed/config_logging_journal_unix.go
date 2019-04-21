@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"os"
 
-	"go.etcd.io/etcd/pkg/logutil"
+	"github.com/templexxx/etcd/pkg/logutil"
 
-	"go.uber.org/zap/zapcore"
+	"github.com/templexxx/zap/zapcore"
 )
 
 // use stderr as fallback

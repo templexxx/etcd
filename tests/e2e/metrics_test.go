@@ -19,7 +19,7 @@ import (
 	"strings"
 	"testing"
 
-	"go.etcd.io/etcd/version"
+	"github.com/templexxx/etcd/version"
 )
 
 func TestV3MetricsSecure(t *testing.T) {

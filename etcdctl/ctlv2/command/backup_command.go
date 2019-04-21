@@ -23,19 +23,19 @@ import (
 	"regexp"
 	"time"
 
-	"go.etcd.io/etcd/etcdserver/api/membership"
-	"go.etcd.io/etcd/etcdserver/api/snap"
-	"go.etcd.io/etcd/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/pkg/fileutil"
-	"go.etcd.io/etcd/pkg/idutil"
-	"go.etcd.io/etcd/pkg/pbutil"
-	"go.etcd.io/etcd/raft/raftpb"
-	"go.etcd.io/etcd/wal"
-	"go.etcd.io/etcd/wal/walpb"
+	"github.com/templexxx/etcd/etcdserver/api/membership"
+	"github.com/templexxx/etcd/etcdserver/api/snap"
+	"github.com/templexxx/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/pkg/fileutil"
+	"github.com/templexxx/etcd/pkg/idutil"
+	"github.com/templexxx/etcd/pkg/pbutil"
+	"github.com/templexxx/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/wal"
+	"github.com/templexxx/etcd/wal/walpb"
 
+	"github.com/templexxx/zap"
 	"github.com/urfave/cli"
 	bolt "go.etcd.io/bbolt"
-	"go.uber.org/zap"
 )
 
 func NewBackupCommand() cli.Command {

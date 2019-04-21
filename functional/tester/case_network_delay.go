@@ -17,9 +17,9 @@ package tester
 import (
 	"time"
 
-	"go.etcd.io/etcd/functional/rpcpb"
+	"github.com/templexxx/etcd/functional/rpcpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const (

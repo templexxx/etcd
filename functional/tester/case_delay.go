@@ -17,7 +17,7 @@ package tester
 import (
 	"time"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type caseDelay struct {

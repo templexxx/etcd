@@ -20,12 +20,12 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/etcdserver"
-	"go.etcd.io/etcd/etcdserver/api/v2error"
-	"go.etcd.io/etcd/etcdserver/api/v2store"
-	"go.etcd.io/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/etcdserver"
+	"github.com/templexxx/etcd/etcdserver/api/v2error"
+	"github.com/templexxx/etcd/etcdserver/api/v2store"
+	"github.com/templexxx/etcd/etcdserver/etcdserverpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type fakeDoer struct{}

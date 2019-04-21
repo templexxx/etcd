@@ -26,13 +26,13 @@ import (
 	"runtime"
 	"strings"
 
-	"go.etcd.io/etcd/embed"
-	"go.etcd.io/etcd/pkg/flags"
-	"go.etcd.io/etcd/pkg/types"
-	"go.etcd.io/etcd/version"
+	"github.com/templexxx/etcd/embed"
+	"github.com/templexxx/etcd/pkg/flags"
+	"github.com/templexxx/etcd/pkg/types"
+	"github.com/templexxx/etcd/version"
 
 	"github.com/ghodss/yaml"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 var (

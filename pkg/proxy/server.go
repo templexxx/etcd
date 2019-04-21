@@ -26,10 +26,10 @@ import (
 	"sync"
 	"time"
 
-	"go.etcd.io/etcd/pkg/transport"
+	"github.com/templexxx/etcd/pkg/transport"
 
 	humanize "github.com/dustin/go-humanize"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 var (
@@ -41,7 +41,8 @@ var (
 
 func init() {
 	var err error
-	defaultLogger, err = zap.NewProduction()
+
+	defaultLogger, err = zap.DefaultConfig().Build()
 	if err != nil {
 		panic(err)
 	}

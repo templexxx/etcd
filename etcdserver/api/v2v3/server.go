@@ -19,15 +19,15 @@ import (
 	"net/http"
 	"time"
 
-	"go.etcd.io/etcd/clientv3"
-	"go.etcd.io/etcd/etcdserver"
-	"go.etcd.io/etcd/etcdserver/api"
-	"go.etcd.io/etcd/etcdserver/api/membership"
-	pb "go.etcd.io/etcd/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/pkg/types"
+	"github.com/templexxx/etcd/clientv3"
+	"github.com/templexxx/etcd/etcdserver"
+	"github.com/templexxx/etcd/etcdserver/api"
+	"github.com/templexxx/etcd/etcdserver/api/membership"
+	pb "github.com/templexxx/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/pkg/types"
 
 	"github.com/coreos/go-semver/semver"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type fakeStats struct{}

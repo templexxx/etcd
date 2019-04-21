@@ -21,14 +21,14 @@ import (
 	"sync"
 	"time"
 
-	"go.etcd.io/etcd/auth"
-	"go.etcd.io/etcd/etcdserver"
-	"go.etcd.io/etcd/etcdserver/api/v3rpc/rpctypes"
-	pb "go.etcd.io/etcd/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/mvcc"
-	"go.etcd.io/etcd/mvcc/mvccpb"
+	"github.com/templexxx/etcd/auth"
+	"github.com/templexxx/etcd/etcdserver"
+	"github.com/templexxx/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/templexxx/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/mvcc"
+	"github.com/templexxx/etcd/mvcc/mvccpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type watchServer struct {

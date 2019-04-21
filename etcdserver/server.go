@@ -29,39 +29,39 @@ import (
 	"sync/atomic"
 	"time"
 
-	"go.etcd.io/etcd/auth"
-	"go.etcd.io/etcd/etcdserver/api"
-	"go.etcd.io/etcd/etcdserver/api/membership"
-	"go.etcd.io/etcd/etcdserver/api/rafthttp"
-	"go.etcd.io/etcd/etcdserver/api/snap"
-	"go.etcd.io/etcd/etcdserver/api/v2discovery"
-	"go.etcd.io/etcd/etcdserver/api/v2http/httptypes"
-	stats "go.etcd.io/etcd/etcdserver/api/v2stats"
-	"go.etcd.io/etcd/etcdserver/api/v2store"
-	"go.etcd.io/etcd/etcdserver/api/v3alarm"
-	"go.etcd.io/etcd/etcdserver/api/v3compactor"
-	pb "go.etcd.io/etcd/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/lease"
-	"go.etcd.io/etcd/lease/leasehttp"
-	"go.etcd.io/etcd/mvcc"
-	"go.etcd.io/etcd/mvcc/backend"
-	"go.etcd.io/etcd/pkg/fileutil"
-	"go.etcd.io/etcd/pkg/idutil"
-	"go.etcd.io/etcd/pkg/pbutil"
-	"go.etcd.io/etcd/pkg/runtime"
-	"go.etcd.io/etcd/pkg/schedule"
-	"go.etcd.io/etcd/pkg/types"
-	"go.etcd.io/etcd/pkg/wait"
-	"go.etcd.io/etcd/raft"
-	"go.etcd.io/etcd/raft/raftpb"
-	"go.etcd.io/etcd/version"
-	"go.etcd.io/etcd/wal"
+	"github.com/templexxx/etcd/auth"
+	"github.com/templexxx/etcd/etcdserver/api"
+	"github.com/templexxx/etcd/etcdserver/api/membership"
+	"github.com/templexxx/etcd/etcdserver/api/rafthttp"
+	"github.com/templexxx/etcd/etcdserver/api/snap"
+	"github.com/templexxx/etcd/etcdserver/api/v2discovery"
+	"github.com/templexxx/etcd/etcdserver/api/v2http/httptypes"
+	stats "github.com/templexxx/etcd/etcdserver/api/v2stats"
+	"github.com/templexxx/etcd/etcdserver/api/v2store"
+	"github.com/templexxx/etcd/etcdserver/api/v3alarm"
+	"github.com/templexxx/etcd/etcdserver/api/v3compactor"
+	pb "github.com/templexxx/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/lease"
+	"github.com/templexxx/etcd/lease/leasehttp"
+	"github.com/templexxx/etcd/mvcc"
+	"github.com/templexxx/etcd/mvcc/backend"
+	"github.com/templexxx/etcd/pkg/fileutil"
+	"github.com/templexxx/etcd/pkg/idutil"
+	"github.com/templexxx/etcd/pkg/pbutil"
+	"github.com/templexxx/etcd/pkg/runtime"
+	"github.com/templexxx/etcd/pkg/schedule"
+	"github.com/templexxx/etcd/pkg/types"
+	"github.com/templexxx/etcd/pkg/wait"
+	"github.com/templexxx/etcd/raft"
+	"github.com/templexxx/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/version"
+	"github.com/templexxx/etcd/wal"
 
 	"github.com/coreos/go-semver/semver"
 	"github.com/coreos/pkg/capnslog"
 	humanize "github.com/dustin/go-humanize"
 	"github.com/prometheus/client_golang/prometheus"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const (
@@ -100,7 +100,7 @@ const (
 )
 
 var (
-	plog = capnslog.NewPackageLogger("go.etcd.io/etcd", "etcdserver")
+	plog = capnslog.NewPackageLogger("github.com/templexxx/etcd", "etcdserver")
 
 	storeMemberAttributeRegexp = regexp.MustCompile(path.Join(membership.StoreMembersPrefix, "[[:xdigit:]]{1,16}", "attributes"))
 )

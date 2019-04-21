@@ -22,19 +22,19 @@ import (
 	"sync"
 	"time"
 
-	"go.etcd.io/etcd/etcdserver/api/membership"
-	"go.etcd.io/etcd/etcdserver/api/rafthttp"
-	pb "go.etcd.io/etcd/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/pkg/contention"
-	"go.etcd.io/etcd/pkg/logutil"
-	"go.etcd.io/etcd/pkg/pbutil"
-	"go.etcd.io/etcd/pkg/types"
-	"go.etcd.io/etcd/raft"
-	"go.etcd.io/etcd/raft/raftpb"
-	"go.etcd.io/etcd/wal"
-	"go.etcd.io/etcd/wal/walpb"
+	"github.com/templexxx/etcd/etcdserver/api/membership"
+	"github.com/templexxx/etcd/etcdserver/api/rafthttp"
+	pb "github.com/templexxx/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/pkg/contention"
+	"github.com/templexxx/etcd/pkg/logutil"
+	"github.com/templexxx/etcd/pkg/pbutil"
+	"github.com/templexxx/etcd/pkg/types"
+	"github.com/templexxx/etcd/raft"
+	"github.com/templexxx/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/wal"
+	"github.com/templexxx/etcd/wal/walpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const (

@@ -18,7 +18,7 @@ import (
 	"reflect"
 	"testing"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func TestKeyIndexGet(t *testing.T) {

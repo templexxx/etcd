@@ -19,16 +19,16 @@ import (
 	"crypto/sha256"
 	"io"
 
-	"go.etcd.io/etcd/auth"
-	"go.etcd.io/etcd/etcdserver"
-	"go.etcd.io/etcd/etcdserver/api/v3rpc/rpctypes"
-	pb "go.etcd.io/etcd/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/mvcc"
-	"go.etcd.io/etcd/mvcc/backend"
-	"go.etcd.io/etcd/raft"
-	"go.etcd.io/etcd/version"
+	"github.com/templexxx/etcd/auth"
+	"github.com/templexxx/etcd/etcdserver"
+	"github.com/templexxx/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/templexxx/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/mvcc"
+	"github.com/templexxx/etcd/mvcc/backend"
+	"github.com/templexxx/etcd/raft"
+	"github.com/templexxx/etcd/version"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type KVGetter interface {

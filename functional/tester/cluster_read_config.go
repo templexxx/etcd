@@ -22,9 +22,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"go.etcd.io/etcd/functional/rpcpb"
+	"github.com/templexxx/etcd/functional/rpcpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 	yaml "gopkg.in/yaml.v2"
 )
 

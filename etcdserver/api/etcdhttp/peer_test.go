@@ -23,13 +23,13 @@ import (
 	"sort"
 	"testing"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 
 	"github.com/coreos/go-semver/semver"
-	"go.etcd.io/etcd/etcdserver/api/membership"
-	"go.etcd.io/etcd/etcdserver/api/rafthttp"
-	"go.etcd.io/etcd/pkg/testutil"
-	"go.etcd.io/etcd/pkg/types"
+	"github.com/templexxx/etcd/etcdserver/api/membership"
+	"github.com/templexxx/etcd/etcdserver/api/rafthttp"
+	"github.com/templexxx/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/pkg/types"
 )
 
 type fakeCluster struct {

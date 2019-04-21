@@ -15,14 +15,13 @@
 package osutil
 
 import (
+	"github.com/templexxx/zap"
 	"os"
 	"os/signal"
 	"reflect"
 	"syscall"
 	"testing"
 	"time"
-
-	"go.uber.org/zap"
 )
 
 func init() { setDflSignal = func(syscall.Signal) {} }

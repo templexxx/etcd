@@ -24,13 +24,13 @@ import (
 	"testing"
 	"time"
 
-	stats "go.etcd.io/etcd/etcdserver/api/v2stats"
-	"go.etcd.io/etcd/pkg/testutil"
-	"go.etcd.io/etcd/pkg/types"
-	"go.etcd.io/etcd/raft/raftpb"
-	"go.etcd.io/etcd/version"
+	stats "github.com/templexxx/etcd/etcdserver/api/v2stats"
+	"github.com/templexxx/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/pkg/types"
+	"github.com/templexxx/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/version"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // TestPipelineSend tests that pipeline could send data using roundtripper

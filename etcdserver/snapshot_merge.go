@@ -17,12 +17,12 @@ package etcdserver
 import (
 	"io"
 
-	"go.etcd.io/etcd/etcdserver/api/snap"
-	"go.etcd.io/etcd/mvcc/backend"
-	"go.etcd.io/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/etcdserver/api/snap"
+	"github.com/templexxx/etcd/mvcc/backend"
+	"github.com/templexxx/etcd/raft/raftpb"
 
 	humanize "github.com/dustin/go-humanize"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // createMergedSnapshotMessage creates a snapshot message that contains: raft status (term, conf),

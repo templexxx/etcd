@@ -23,10 +23,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"go.etcd.io/etcd/pkg/fileutil"
+	"github.com/templexxx/etcd/pkg/fileutil"
 
 	humanize "github.com/dustin/go-humanize"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 var ErrNoDBSnapshot = errors.New("snap: snapshot file doesn't exist")

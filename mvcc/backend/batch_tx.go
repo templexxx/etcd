@@ -22,7 +22,7 @@ import (
 	"time"
 
 	bolt "go.etcd.io/bbolt"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type BatchTx interface {

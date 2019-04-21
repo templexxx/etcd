@@ -25,15 +25,15 @@ import (
 	"sync"
 	"time"
 
-	stats "go.etcd.io/etcd/etcdserver/api/v2stats"
-	"go.etcd.io/etcd/pkg/httputil"
-	"go.etcd.io/etcd/pkg/transport"
-	"go.etcd.io/etcd/pkg/types"
-	"go.etcd.io/etcd/raft/raftpb"
-	"go.etcd.io/etcd/version"
+	stats "github.com/templexxx/etcd/etcdserver/api/v2stats"
+	"github.com/templexxx/etcd/pkg/httputil"
+	"github.com/templexxx/etcd/pkg/transport"
+	"github.com/templexxx/etcd/pkg/types"
+	"github.com/templexxx/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/version"
 
 	"github.com/coreos/go-semver/semver"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 	"golang.org/x/time/rate"
 )
 

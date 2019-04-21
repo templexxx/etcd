@@ -20,9 +20,9 @@ import (
 	"strings"
 	"testing"
 
-	"go.etcd.io/etcd/integration"
-	"go.etcd.io/etcd/pkg/testutil"
-	"go.etcd.io/etcd/pkg/types"
+	"github.com/templexxx/etcd/integration"
+	"github.com/templexxx/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/pkg/types"
 )
 
 func TestMemberList(t *testing.T) {

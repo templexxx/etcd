@@ -27,12 +27,12 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"go.etcd.io/etcd/clientv3/balancer"
-	"go.etcd.io/etcd/clientv3/balancer/picker"
-	"go.etcd.io/etcd/clientv3/balancer/resolver/endpoint"
-	"go.etcd.io/etcd/etcdserver/api/v3rpc/rpctypes"
-	"go.etcd.io/etcd/pkg/logutil"
-	"go.uber.org/zap"
+	"github.com/templexxx/etcd/clientv3/balancer"
+	"github.com/templexxx/etcd/clientv3/balancer/picker"
+	"github.com/templexxx/etcd/clientv3/balancer/resolver/endpoint"
+	"github.com/templexxx/etcd/etcdserver/api/v3rpc/rpctypes"
+	"github.com/templexxx/etcd/pkg/logutil"
+	"github.com/templexxx/zap"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/credentials"
@@ -52,7 +52,7 @@ func init() {
 	lg := zap.NewNop()
 	if os.Getenv("ETCD_CLIENT_DEBUG") != "" {
 		var err error
-		lg, err = zap.NewProductionConfig().Build() // info level logging
+		lg, err = zap.DefaultConfig().Build() // info level logging
 		if err != nil {
 			panic(err)
 		}

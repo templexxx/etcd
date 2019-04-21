@@ -19,7 +19,7 @@ package osutil
 import (
 	"os"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type InterruptHandler func()

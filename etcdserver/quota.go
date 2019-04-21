@@ -17,10 +17,10 @@ package etcdserver
 import (
 	"sync"
 
-	pb "go.etcd.io/etcd/etcdserver/etcdserverpb"
+	pb "github.com/templexxx/etcd/etcdserver/etcdserverpb"
 
 	humanize "github.com/dustin/go-humanize"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const (

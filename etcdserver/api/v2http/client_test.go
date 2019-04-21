@@ -29,20 +29,20 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/etcdserver"
-	"go.etcd.io/etcd/etcdserver/api"
-	"go.etcd.io/etcd/etcdserver/api/membership"
-	"go.etcd.io/etcd/etcdserver/api/v2error"
-	"go.etcd.io/etcd/etcdserver/api/v2http/httptypes"
-	"go.etcd.io/etcd/etcdserver/api/v2store"
-	"go.etcd.io/etcd/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/pkg/testutil"
-	"go.etcd.io/etcd/pkg/types"
-	"go.etcd.io/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/etcdserver"
+	"github.com/templexxx/etcd/etcdserver/api"
+	"github.com/templexxx/etcd/etcdserver/api/membership"
+	"github.com/templexxx/etcd/etcdserver/api/v2error"
+	"github.com/templexxx/etcd/etcdserver/api/v2http/httptypes"
+	"github.com/templexxx/etcd/etcdserver/api/v2store"
+	"github.com/templexxx/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/pkg/types"
+	"github.com/templexxx/etcd/raft/raftpb"
 
 	"github.com/coreos/go-semver/semver"
 	"github.com/jonboulle/clockwork"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func mustMarshalEvent(t *testing.T, ev *v2store.Event) string {

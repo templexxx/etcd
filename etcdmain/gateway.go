@@ -21,10 +21,10 @@ import (
 	"os"
 	"time"
 
-	"go.etcd.io/etcd/proxy/tcpproxy"
+	"github.com/templexxx/etcd/proxy/tcpproxy"
 
 	"github.com/spf13/cobra"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 var (
@@ -93,7 +93,7 @@ func stripSchema(eps []string) []string {
 
 func startGateway(cmd *cobra.Command, args []string) {
 	var lg *zap.Logger
-	lg, err := zap.NewProduction()
+	lg, err := zap.DefaultConfig().Build()
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)

@@ -19,7 +19,7 @@ import (
 	"sync"
 
 	"github.com/google/btree"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type index interface {

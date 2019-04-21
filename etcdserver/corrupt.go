@@ -19,13 +19,13 @@ import (
 	"fmt"
 	"time"
 
-	"go.etcd.io/etcd/clientv3"
-	"go.etcd.io/etcd/etcdserver/api/v3rpc/rpctypes"
-	pb "go.etcd.io/etcd/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/mvcc"
-	"go.etcd.io/etcd/pkg/types"
+	"github.com/templexxx/etcd/clientv3"
+	"github.com/templexxx/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/templexxx/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/mvcc"
+	"github.com/templexxx/etcd/pkg/types"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // CheckInitialHashKV compares initial hash values with its peers

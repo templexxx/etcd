@@ -18,12 +18,12 @@ import (
 	"context"
 	"strings"
 
-	"go.etcd.io/etcd/auth"
-	"go.etcd.io/etcd/etcdserver"
-	"go.etcd.io/etcd/etcdserver/api/membership"
-	"go.etcd.io/etcd/etcdserver/api/v3rpc/rpctypes"
-	"go.etcd.io/etcd/lease"
-	"go.etcd.io/etcd/mvcc"
+	"github.com/templexxx/etcd/auth"
+	"github.com/templexxx/etcd/etcdserver"
+	"github.com/templexxx/etcd/etcdserver/api/membership"
+	"github.com/templexxx/etcd/etcdserver/api/v3rpc/rpctypes"
+	"github.com/templexxx/etcd/lease"
+	"github.com/templexxx/etcd/mvcc"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

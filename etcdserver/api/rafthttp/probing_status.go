@@ -19,7 +19,7 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/xiang90/probing"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const (

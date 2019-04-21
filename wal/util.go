@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"strings"
 
-	"go.etcd.io/etcd/pkg/fileutil"
+	"github.com/templexxx/etcd/pkg/fileutil"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 var errBadWALName = errors.New("bad wal name")

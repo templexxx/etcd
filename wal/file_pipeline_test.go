@@ -20,7 +20,7 @@ import (
 	"os"
 	"testing"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func TestFilePipeline(t *testing.T) {

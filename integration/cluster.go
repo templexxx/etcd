@@ -33,28 +33,28 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/client"
-	"go.etcd.io/etcd/clientv3"
-	"go.etcd.io/etcd/embed"
-	"go.etcd.io/etcd/etcdserver"
-	"go.etcd.io/etcd/etcdserver/api/etcdhttp"
-	"go.etcd.io/etcd/etcdserver/api/rafthttp"
-	"go.etcd.io/etcd/etcdserver/api/v2http"
-	"go.etcd.io/etcd/etcdserver/api/v3client"
-	"go.etcd.io/etcd/etcdserver/api/v3election"
-	epb "go.etcd.io/etcd/etcdserver/api/v3election/v3electionpb"
-	"go.etcd.io/etcd/etcdserver/api/v3lock"
-	lockpb "go.etcd.io/etcd/etcdserver/api/v3lock/v3lockpb"
-	"go.etcd.io/etcd/etcdserver/api/v3rpc"
-	pb "go.etcd.io/etcd/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/pkg/logutil"
-	"go.etcd.io/etcd/pkg/testutil"
-	"go.etcd.io/etcd/pkg/tlsutil"
-	"go.etcd.io/etcd/pkg/transport"
-	"go.etcd.io/etcd/pkg/types"
+	"github.com/templexxx/etcd/client"
+	"github.com/templexxx/etcd/clientv3"
+	"github.com/templexxx/etcd/embed"
+	"github.com/templexxx/etcd/etcdserver"
+	"github.com/templexxx/etcd/etcdserver/api/etcdhttp"
+	"github.com/templexxx/etcd/etcdserver/api/rafthttp"
+	"github.com/templexxx/etcd/etcdserver/api/v2http"
+	"github.com/templexxx/etcd/etcdserver/api/v3client"
+	"github.com/templexxx/etcd/etcdserver/api/v3election"
+	epb "github.com/templexxx/etcd/etcdserver/api/v3election/v3electionpb"
+	"github.com/templexxx/etcd/etcdserver/api/v3lock"
+	lockpb "github.com/templexxx/etcd/etcdserver/api/v3lock/v3lockpb"
+	"github.com/templexxx/etcd/etcdserver/api/v3rpc"
+	pb "github.com/templexxx/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/pkg/logutil"
+	"github.com/templexxx/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/pkg/tlsutil"
+	"github.com/templexxx/etcd/pkg/transport"
+	"github.com/templexxx/etcd/pkg/types"
 
 	"github.com/soheilhy/cmux"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 	"golang.org/x/crypto/bcrypt"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"
@@ -115,7 +115,7 @@ var (
 
 func init() {
 	if os.Getenv("CLUSTER_DEBUG") != "" {
-		lg, _ = zap.NewProduction()
+		lg, _ = zap.DefaultConfig().Build()
 	}
 }
 
@@ -676,11 +676,9 @@ func mustNewMember(t testing.TB, mcfg memberConfig) *member {
 
 	lcfg := logutil.DefaultZapLoggerConfig
 	m.LoggerConfig = &lcfg
-	m.LoggerConfig.OutputPaths = []string{"/dev/null"}
-	m.LoggerConfig.ErrorOutputPaths = []string{"/dev/null"}
+	m.LoggerConfig.OutputPath = "/dev/null"
 	if os.Getenv("CLUSTER_DEBUG") != "" {
-		m.LoggerConfig.OutputPaths = []string{"stderr"}
-		m.LoggerConfig.ErrorOutputPaths = []string{"stderr"}
+		m.LoggerConfig.OutputPath = "stderr"
 	}
 	m.Logger, err = m.LoggerConfig.Build()
 	if err != nil {

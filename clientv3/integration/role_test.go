@@ -18,9 +18,9 @@ import (
 	"context"
 	"testing"
 
-	"go.etcd.io/etcd/etcdserver/api/v3rpc/rpctypes"
-	"go.etcd.io/etcd/integration"
-	"go.etcd.io/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/etcdserver/api/v3rpc/rpctypes"
+	"github.com/templexxx/etcd/integration"
+	"github.com/templexxx/etcd/pkg/testutil"
 )
 
 func TestRoleError(t *testing.T) {

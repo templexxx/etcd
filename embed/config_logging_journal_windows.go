@@ -19,7 +19,7 @@ package embed
 import (
 	"os"
 
-	"go.uber.org/zap/zapcore"
+	"github.com/templexxx/zap/zapcore"
 )
 
 func getJournalWriteSyncer() (zapcore.WriteSyncer, error) {

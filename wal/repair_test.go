@@ -21,10 +21,10 @@ import (
 	"os"
 	"testing"
 
-	"go.etcd.io/etcd/raft/raftpb"
-	"go.etcd.io/etcd/wal/walpb"
+	"github.com/templexxx/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/wal/walpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type corruptFunc func(string, int64) error

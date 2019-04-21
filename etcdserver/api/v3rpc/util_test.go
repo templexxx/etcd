@@ -19,8 +19,8 @@ import (
 	"errors"
 	"testing"
 
-	"go.etcd.io/etcd/etcdserver/api/v3rpc/rpctypes"
-	"go.etcd.io/etcd/mvcc"
+	"github.com/templexxx/etcd/etcdserver/api/v3rpc/rpctypes"
+	"github.com/templexxx/etcd/mvcc"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

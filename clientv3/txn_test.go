@@ -18,7 +18,7 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/pkg/testutil"
 )
 
 func TestTxnPanics(t *testing.T) {

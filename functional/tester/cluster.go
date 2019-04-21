@@ -29,12 +29,12 @@ import (
 	"sync"
 	"time"
 
-	"go.etcd.io/etcd/functional/rpcpb"
-	"go.etcd.io/etcd/pkg/debugutil"
-	"go.etcd.io/etcd/pkg/fileutil"
+	"github.com/templexxx/etcd/functional/rpcpb"
+	"github.com/templexxx/etcd/pkg/debugutil"
+	"github.com/templexxx/etcd/pkg/fileutil"
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 	"golang.org/x/time/rate"
 	"google.golang.org/grpc"
 )

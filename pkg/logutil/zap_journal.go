@@ -24,10 +24,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"go.etcd.io/etcd/pkg/systemd"
+	"github.com/templexxx/etcd/pkg/systemd"
 
 	"github.com/coreos/go-systemd/journal"
-	"go.uber.org/zap/zapcore"
+	"github.com/templexxx/zap/zapcore"
 )
 
 // NewJournalWriter wraps "io.Writer" to redirect log output
@@ -68,8 +68,6 @@ func (w *journalWriter) Write(p []byte) (int, error) {
 	case zapcore.ErrorLevel.String():
 		pri = journal.PriErr
 
-	case zapcore.DPanicLevel.String():
-		pri = journal.PriCrit
 	case zapcore.PanicLevel.String():
 		pri = journal.PriCrit
 	case zapcore.FatalLevel.String():

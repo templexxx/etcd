@@ -18,9 +18,9 @@ package main
 import (
 	"flag"
 
-	"go.etcd.io/etcd/functional/tester"
+	"github.com/templexxx/etcd/functional/tester"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 var logger *zap.Logger

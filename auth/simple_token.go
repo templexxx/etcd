@@ -27,7 +27,7 @@ import (
 	"sync"
 	"time"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const (

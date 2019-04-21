@@ -25,12 +25,12 @@ import (
 	"syscall"
 	"time"
 
-	"go.etcd.io/etcd/embed"
-	"go.etcd.io/etcd/functional/rpcpb"
-	"go.etcd.io/etcd/pkg/fileutil"
-	"go.etcd.io/etcd/pkg/proxy"
+	"github.com/templexxx/etcd/embed"
+	"github.com/templexxx/etcd/functional/rpcpb"
+	"github.com/templexxx/etcd/pkg/fileutil"
+	"github.com/templexxx/etcd/pkg/proxy"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // return error for system errors (e.g. fail to create files)

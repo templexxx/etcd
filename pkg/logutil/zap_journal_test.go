@@ -20,8 +20,8 @@ import (
 	"bytes"
 	"testing"
 
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
+	"github.com/templexxx/zap"
+	"github.com/templexxx/zap/zapcore"
 )
 
 func TestNewJournalWriter(t *testing.T) {
@@ -39,7 +39,7 @@ func TestNewJournalWriter(t *testing.T) {
 		zap.NewAtomicLevelAt(zap.InfoLevel),
 	)
 
-	lg := zap.New(cr, zap.AddCaller(), zap.ErrorOutput(syncer))
+	lg := zap.New(cr)
 	defer lg.Sync()
 
 	lg.Info("TestNewJournalWriter")

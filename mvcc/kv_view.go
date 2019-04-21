@@ -14,7 +14,7 @@
 
 package mvcc
 
-import "go.etcd.io/etcd/lease"
+import "github.com/templexxx/etcd/lease"
 
 type readView struct{ kv KV }
 

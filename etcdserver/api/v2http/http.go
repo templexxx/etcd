@@ -20,13 +20,13 @@ import (
 	"strings"
 	"time"
 
-	"go.etcd.io/etcd/etcdserver/api/etcdhttp"
-	"go.etcd.io/etcd/etcdserver/api/v2auth"
-	"go.etcd.io/etcd/etcdserver/api/v2http/httptypes"
-	"go.etcd.io/etcd/pkg/logutil"
+	"github.com/templexxx/etcd/etcdserver/api/etcdhttp"
+	"github.com/templexxx/etcd/etcdserver/api/v2auth"
+	"github.com/templexxx/etcd/etcdserver/api/v2http/httptypes"
+	"github.com/templexxx/etcd/pkg/logutil"
 
 	"github.com/coreos/pkg/capnslog"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const (
@@ -35,7 +35,7 @@ const (
 )
 
 var (
-	plog = capnslog.NewPackageLogger("go.etcd.io/etcd", "etcdserver/api/v2http")
+	plog = capnslog.NewPackageLogger("github.com/templexxx/etcd", "etcdserver/api/v2http")
 	mlog = logutil.NewMergeLogger(plog)
 )
 
