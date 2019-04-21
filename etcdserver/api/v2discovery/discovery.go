@@ -29,17 +29,17 @@ import (
 	"strings"
 	"time"
 
-	"go.etcd.io/etcd/client"
-	"go.etcd.io/etcd/pkg/transport"
-	"go.etcd.io/etcd/pkg/types"
+	"github.com/templexxx/etcd/client"
+	"github.com/templexxx/etcd/pkg/transport"
+	"github.com/templexxx/etcd/pkg/types"
 
 	"github.com/coreos/pkg/capnslog"
 	"github.com/jonboulle/clockwork"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 var (
-	plog = capnslog.NewPackageLogger("go.etcd.io/etcd", "discovery")
+	plog = capnslog.NewPackageLogger("github.com/templexxx/etcd", "discovery")
 
 	ErrInvalidURL           = errors.New("discovery: invalid URL")
 	ErrBadSizeKey           = errors.New("discovery: size key is bad")

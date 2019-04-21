@@ -22,13 +22,13 @@ import (
 	"strings"
 	"time"
 
-	"go.etcd.io/etcd/pkg/netutil"
-	"go.etcd.io/etcd/pkg/transport"
-	"go.etcd.io/etcd/pkg/types"
+	"github.com/templexxx/etcd/pkg/netutil"
+	"github.com/templexxx/etcd/pkg/transport"
+	"github.com/templexxx/etcd/pkg/types"
 
+	"github.com/templexxx/zap"
+	"github.com/templexxx/zap/zapcore"
 	bolt "go.etcd.io/bbolt"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
 )
 
 // ServerConfig holds the configuration of etcd as taken from the command line or discovery.

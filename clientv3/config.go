@@ -19,7 +19,7 @@ import (
 	"crypto/tls"
 	"time"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 	"google.golang.org/grpc"
 )
 

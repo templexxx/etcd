@@ -17,10 +17,9 @@ package auth
 import (
 	"testing"
 
-	"go.etcd.io/etcd/auth/authpb"
-	"go.etcd.io/etcd/pkg/adt"
-
-	"go.uber.org/zap"
+	"github.com/templexxx/etcd/auth/authpb"
+	"github.com/templexxx/etcd/pkg/adt"
+	"github.com/templexxx/zap"
 )
 
 func TestRangePermission(t *testing.T) {

@@ -18,7 +18,7 @@ import (
 	"math/rand"
 	"time"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func (clus *Cluster) shuffleCases() {

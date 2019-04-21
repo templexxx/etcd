@@ -29,9 +29,8 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/pkg/transport"
-
-	"go.uber.org/zap"
+	"github.com/templexxx/etcd/pkg/transport"
+	"github.com/templexxx/zap"
 )
 
 // enable DebugLevel

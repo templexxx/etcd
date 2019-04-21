@@ -22,7 +22,7 @@
 //
 package main
 
-import "go.etcd.io/etcd/etcdmain"
+import "github.com/templexxx/etcd/etcdmain"
 
 func main() {
 	etcdmain.Main()

@@ -20,9 +20,9 @@ import (
 	"sync"
 	"time"
 
-	"go.etcd.io/etcd/pkg/types"
+	"github.com/templexxx/etcd/pkg/types"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type failureType struct {

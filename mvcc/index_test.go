@@ -19,7 +19,7 @@ import (
 	"testing"
 
 	"github.com/google/btree"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func TestIndexGet(t *testing.T) {

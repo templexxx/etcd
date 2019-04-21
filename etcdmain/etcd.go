@@ -26,26 +26,26 @@ import (
 	"strings"
 	"time"
 
-	"go.etcd.io/etcd/embed"
-	"go.etcd.io/etcd/etcdserver"
-	"go.etcd.io/etcd/etcdserver/api/etcdhttp"
-	"go.etcd.io/etcd/etcdserver/api/v2discovery"
-	"go.etcd.io/etcd/pkg/fileutil"
-	pkgioutil "go.etcd.io/etcd/pkg/ioutil"
-	"go.etcd.io/etcd/pkg/osutil"
-	"go.etcd.io/etcd/pkg/transport"
-	"go.etcd.io/etcd/pkg/types"
-	"go.etcd.io/etcd/proxy/httpproxy"
-	"go.etcd.io/etcd/version"
+	"github.com/templexxx/etcd/embed"
+	"github.com/templexxx/etcd/etcdserver"
+	"github.com/templexxx/etcd/etcdserver/api/etcdhttp"
+	"github.com/templexxx/etcd/etcdserver/api/v2discovery"
+	"github.com/templexxx/etcd/pkg/fileutil"
+	pkgioutil "github.com/templexxx/etcd/pkg/ioutil"
+	"github.com/templexxx/etcd/pkg/osutil"
+	"github.com/templexxx/etcd/pkg/transport"
+	"github.com/templexxx/etcd/pkg/types"
+	"github.com/templexxx/etcd/proxy/httpproxy"
+	"github.com/templexxx/etcd/version"
 
 	"github.com/coreos/pkg/capnslog"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 	"google.golang.org/grpc"
 )
 
 type dirType string
 
-var plog = capnslog.NewPackageLogger("go.etcd.io/etcd", "etcdmain")
+var plog = capnslog.NewPackageLogger("github.com/templexxx/etcd", "etcdmain")
 
 var (
 	dirMember = dirType("member")

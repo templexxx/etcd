@@ -25,11 +25,11 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/etcdserver/api/snap"
-	"go.etcd.io/etcd/pkg/types"
-	"go.etcd.io/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/etcdserver/api/snap"
+	"github.com/templexxx/etcd/pkg/types"
+	"github.com/templexxx/etcd/raft/raftpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type strReaderCloser struct{ *strings.Reader }

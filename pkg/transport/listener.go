@@ -31,9 +31,9 @@ import (
 	"strings"
 	"time"
 
-	"go.etcd.io/etcd/pkg/tlsutil"
+	"github.com/templexxx/etcd/pkg/tlsutil"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // NewListener creates a new listner.

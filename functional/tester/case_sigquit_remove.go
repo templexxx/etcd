@@ -21,10 +21,10 @@ import (
 	"strings"
 	"time"
 
-	"go.etcd.io/etcd/clientv3"
-	"go.etcd.io/etcd/functional/rpcpb"
+	"github.com/templexxx/etcd/clientv3"
+	"github.com/templexxx/etcd/functional/rpcpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func inject_SIGQUIT_ETCD_AND_REMOVE_DATA(clus *Cluster, idx1 int) error {

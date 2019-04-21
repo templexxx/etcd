@@ -26,9 +26,9 @@ import (
 	"testing"
 	"time"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 
-	"go.etcd.io/etcd/client"
+	"github.com/templexxx/etcd/client"
 
 	"github.com/jonboulle/clockwork"
 )

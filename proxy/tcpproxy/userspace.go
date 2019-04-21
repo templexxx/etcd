@@ -23,10 +23,10 @@ import (
 	"time"
 
 	"github.com/coreos/pkg/capnslog"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
-var plog = capnslog.NewPackageLogger("go.etcd.io/etcd", "proxy/tcpproxy")
+var plog = capnslog.NewPackageLogger("github.com/templexxx/etcd", "proxy/tcpproxy")
 
 type remote struct {
 	mu       sync.Mutex

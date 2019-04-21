@@ -21,14 +21,14 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/lease"
-	"go.etcd.io/etcd/mvcc/backend"
-	"go.etcd.io/etcd/mvcc/mvccpb"
-	"go.etcd.io/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/lease"
+	"github.com/templexxx/etcd/mvcc/backend"
+	"github.com/templexxx/etcd/mvcc/mvccpb"
+	"github.com/templexxx/etcd/pkg/testutil"
 
 	"github.com/prometheus/client_golang/prometheus"
 	dto "github.com/prometheus/client_model/go"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // Functional tests for features implemented in v3 store. It treats v3 store

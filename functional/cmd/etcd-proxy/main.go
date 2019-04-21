@@ -28,9 +28,9 @@ import (
 	"syscall"
 	"time"
 
-	"go.etcd.io/etcd/pkg/proxy"
+	"github.com/templexxx/etcd/pkg/proxy"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 var from string

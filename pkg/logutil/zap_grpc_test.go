@@ -24,8 +24,8 @@ import (
 	"testing"
 	"time"
 
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
+	"github.com/templexxx/zap"
+	"github.com/templexxx/zap/zapcore"
 )
 
 func TestNewGRPCLoggerV2(t *testing.T) {
@@ -33,16 +33,11 @@ func TestNewGRPCLoggerV2(t *testing.T) {
 	defer os.RemoveAll(logPath)
 
 	lcfg := zap.Config{
-		Level:       zap.NewAtomicLevelAt(zap.InfoLevel),
-		Development: false,
-		Sampling: &zap.SamplingConfig{
-			Initial:    100,
-			Thereafter: 100,
-		},
-		Encoding:         "json",
-		EncoderConfig:    DefaultZapLoggerConfig.EncoderConfig,
-		OutputPaths:      []string{logPath},
-		ErrorOutputPaths: []string{logPath},
+		Level:         zap.NewAtomicLevelAt(zap.InfoLevel),
+		Encoding:      "json",
+		EncoderConfig: DefaultZapLoggerConfig.EncoderConfig,
+		OutputPath:    logPath,
+		Flush:         1,
 	}
 	gl, err := NewGRPCLoggerV2(lcfg)
 	if err != nil {
@@ -52,6 +47,7 @@ func TestNewGRPCLoggerV2(t *testing.T) {
 	// debug level is not enabled,
 	// so info level gRPC-side logging is discarded
 	gl.Info("etcd-logutil-1")
+	time.Sleep(1 * time.Second)
 	data, err := ioutil.ReadFile(logPath)
 	if err != nil {
 		t.Fatal(err)
@@ -61,6 +57,7 @@ func TestNewGRPCLoggerV2(t *testing.T) {
 	}
 
 	gl.Warning("etcd-logutil-2")
+	time.Sleep(1 * time.Second)
 	data, err = ioutil.ReadFile(logPath)
 	if err != nil {
 		t.Fatal(err)
@@ -68,21 +65,18 @@ func TestNewGRPCLoggerV2(t *testing.T) {
 	if !bytes.Contains(data, []byte("etcd-logutil-2")) {
 		t.Fatalf("can't find data in log %q", string(data))
 	}
-	if !bytes.Contains(data, []byte("logutil/zap_grpc_test.go:")) {
-		t.Fatalf("unexpected caller; %q", string(data))
-	}
 }
 
 func TestNewGRPCLoggerV2FromZapCore(t *testing.T) {
 	buf := bytes.NewBuffer(nil)
 	syncer := zapcore.AddSync(buf)
 	cr := zapcore.NewCore(
-		zapcore.NewJSONEncoder(zap.NewProductionEncoderConfig()),
+		zapcore.NewJSONEncoder(zap.DefaultEncoderConf()),
 		syncer,
 		zap.NewAtomicLevelAt(zap.InfoLevel),
 	)
 
-	lg := NewGRPCLoggerV2FromZapCore(cr, syncer)
+	lg := NewGRPCLoggerV2FromZapCore(cr)
 	lg.Warning("TestNewGRPCLoggerV2FromZapCore")
 	txt := buf.String()
 	if !strings.Contains(txt, "TestNewGRPCLoggerV2FromZapCore") {

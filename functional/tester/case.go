@@ -19,9 +19,9 @@ import (
 	"math/rand"
 	"time"
 
-	"go.etcd.io/etcd/functional/rpcpb"
+	"github.com/templexxx/etcd/functional/rpcpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // Case defines failure/test injection interface.

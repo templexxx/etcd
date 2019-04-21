@@ -20,16 +20,16 @@ import (
 	"encoding/binary"
 	"time"
 
-	"go.etcd.io/etcd/auth"
-	"go.etcd.io/etcd/etcdserver/api/membership"
-	pb "go.etcd.io/etcd/etcdserver/etcdserverpb"
-	"go.etcd.io/etcd/lease"
-	"go.etcd.io/etcd/lease/leasehttp"
-	"go.etcd.io/etcd/mvcc"
-	"go.etcd.io/etcd/raft"
+	"github.com/templexxx/etcd/auth"
+	"github.com/templexxx/etcd/etcdserver/api/membership"
+	pb "github.com/templexxx/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/lease"
+	"github.com/templexxx/etcd/lease/leasehttp"
+	"github.com/templexxx/etcd/mvcc"
+	"github.com/templexxx/etcd/raft"
 
 	"github.com/gogo/protobuf/proto"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const (

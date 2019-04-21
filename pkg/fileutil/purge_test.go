@@ -16,14 +16,13 @@ package fileutil
 
 import (
 	"fmt"
+	"github.com/templexxx/zap"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"reflect"
 	"testing"
 	"time"
-
-	"go.uber.org/zap"
 )
 
 func TestPurgeFile(t *testing.T) {

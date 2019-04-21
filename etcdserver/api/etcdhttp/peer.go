@@ -18,12 +18,12 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"go.etcd.io/etcd/etcdserver"
-	"go.etcd.io/etcd/etcdserver/api"
-	"go.etcd.io/etcd/etcdserver/api/rafthttp"
-	"go.etcd.io/etcd/lease/leasehttp"
+	"github.com/templexxx/etcd/etcdserver"
+	"github.com/templexxx/etcd/etcdserver/api"
+	"github.com/templexxx/etcd/etcdserver/api/rafthttp"
+	"github.com/templexxx/etcd/lease/leasehttp"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const (

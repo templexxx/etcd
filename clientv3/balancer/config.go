@@ -15,9 +15,9 @@
 package balancer
 
 import (
-	"go.etcd.io/etcd/clientv3/balancer/picker"
+	"github.com/templexxx/etcd/clientv3/balancer/picker"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // Config defines balancer configurations.

@@ -18,10 +18,10 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"go.etcd.io/etcd/lease"
-	"go.etcd.io/etcd/mvcc/backend"
+	"github.com/templexxx/etcd/lease"
+	"github.com/templexxx/etcd/mvcc/backend"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type fakeConsistentIndex uint64

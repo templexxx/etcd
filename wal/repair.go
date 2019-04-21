@@ -19,10 +19,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"go.etcd.io/etcd/pkg/fileutil"
-	"go.etcd.io/etcd/wal/walpb"
+	"github.com/templexxx/etcd/pkg/fileutil"
+	"github.com/templexxx/etcd/wal/walpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // Repair tries to repair ErrUnexpectedEOF in the

@@ -18,10 +18,10 @@ import (
 	"fmt"
 	"os"
 
-	"go.etcd.io/etcd/pkg/srv"
-	"go.etcd.io/etcd/pkg/transport"
+	"github.com/templexxx/etcd/pkg/srv"
+	"github.com/templexxx/etcd/pkg/transport"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func discoverEndpoints(lg *zap.Logger, dns string, ca string, insecure bool, serviceName string) (s srv.SRVClients) {

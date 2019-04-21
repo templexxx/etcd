@@ -23,11 +23,11 @@ import (
 	"reflect"
 	"sync"
 
-	"go.etcd.io/etcd/pkg/logutil"
+	"github.com/templexxx/etcd/pkg/logutil"
 
 	"github.com/coreos/pkg/capnslog"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
+	"github.com/templexxx/zap"
+	"github.com/templexxx/zap/zapcore"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"
 )
@@ -92,7 +92,7 @@ func (cfg *Config) setupLogging() error {
 
 		// TODO: deprecate with "capnslog"
 		if cfg.LogPkgLevels != "" {
-			repoLog := capnslog.MustRepoLogger("go.etcd.io/etcd")
+			repoLog := capnslog.MustRepoLogger("github.com/templexxx/etcd")
 			settings, err := repoLog.ParseLogLevelConfig(cfg.LogPkgLevels)
 			if err != nil {
 				plog.Warningf("couldn't parse log level string: %s, continuing with default levels", err.Error())
@@ -216,7 +216,7 @@ func (cfg *Config) setupLogging() error {
 			)
 			if cfg.ZapLoggerBuilder == nil {
 				cfg.ZapLoggerBuilder = func(c *Config) error {
-					c.logger = zap.New(cr, zap.AddCaller(), zap.ErrorOutput(syncer))
+					c.logger = zap.New(cr)
 					c.loggerMu.Lock()
 					defer c.loggerMu.Unlock()
 					c.loggerConfig = nil
@@ -224,7 +224,7 @@ func (cfg *Config) setupLogging() error {
 					c.loggerWriteSyncer = syncer
 
 					grpcLogOnce.Do(func() {
-						grpclog.SetLoggerV2(logutil.NewGRPCLoggerV2FromZapCore(cr, syncer))
+						grpclog.SetLoggerV2(logutil.NewGRPCLoggerV2FromZapCore(cr))
 					})
 					return nil
 				}
@@ -284,7 +284,7 @@ func NewZapCoreLoggerBuilder(lg *zap.Logger, cr zapcore.Core, syncer zapcore.Wri
 		cfg.loggerWriteSyncer = syncer
 
 		grpcLogOnce.Do(func() {
-			grpclog.SetLoggerV2(logutil.NewGRPCLoggerV2FromZapCore(cr, syncer))
+			grpclog.SetLoggerV2(logutil.NewGRPCLoggerV2FromZapCore(cr))
 		})
 		return nil
 	}

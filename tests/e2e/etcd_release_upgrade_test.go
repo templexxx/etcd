@@ -22,9 +22,9 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/pkg/fileutil"
-	"go.etcd.io/etcd/pkg/testutil"
-	"go.etcd.io/etcd/version"
+	"github.com/templexxx/etcd/pkg/fileutil"
+	"github.com/templexxx/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/version"
 )
 
 // TestReleaseUpgrade ensures that changes to master branch does not affect

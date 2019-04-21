@@ -20,10 +20,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"go.etcd.io/etcd/clientv3/snapshot"
+	"github.com/templexxx/etcd/clientv3/snapshot"
 
 	"github.com/spf13/cobra"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 const (

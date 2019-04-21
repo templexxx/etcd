@@ -18,8 +18,8 @@ import (
 	"context"
 	"io"
 
-	"go.etcd.io/etcd/clientv3"
-	pb "go.etcd.io/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/clientv3"
+	pb "github.com/templexxx/etcd/etcdserver/etcdserverpb"
 )
 
 type maintenanceProxy struct {

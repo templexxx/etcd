@@ -24,8 +24,8 @@ import (
 	"testing"
 	"time"
 
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
+	"github.com/templexxx/zap"
+	"github.com/templexxx/zap/zapcore"
 )
 
 func TestNewRaftLogger(t *testing.T) {
@@ -33,16 +33,13 @@ func TestNewRaftLogger(t *testing.T) {
 	defer os.RemoveAll(logPath)
 
 	lcfg := &zap.Config{
-		Level:       zap.NewAtomicLevelAt(zap.DebugLevel),
-		Development: false,
-		Sampling: &zap.SamplingConfig{
-			Initial:    100,
-			Thereafter: 100,
-		},
-		Encoding:         "json",
-		EncoderConfig:    DefaultZapLoggerConfig.EncoderConfig,
-		OutputPaths:      []string{logPath},
-		ErrorOutputPaths: []string{logPath},
+		Level: zap.NewAtomicLevelAt(zap.DebugLevel),
+
+		Encoding:      "json",
+		EncoderConfig: DefaultZapLoggerConfig.EncoderConfig,
+		OutputPath:    logPath,
+		Flush:         1,
+		BufSize:       0,
 	}
 	gl, err := NewRaftLogger(lcfg)
 	if err != nil {
@@ -50,15 +47,18 @@ func TestNewRaftLogger(t *testing.T) {
 	}
 
 	gl.Info("etcd-logutil-1")
+	time.Sleep(1 * time.Second)
 	data, err := ioutil.ReadFile(logPath)
 	if err != nil {
 		t.Fatal(err)
 	}
+
 	if !bytes.Contains(data, []byte("etcd-logutil-1")) {
 		t.Fatalf("can't find data in log %q", string(data))
 	}
 
 	gl.Warning("etcd-logutil-2")
+	time.Sleep(1 * time.Second)
 	data, err = ioutil.ReadFile(logPath)
 	if err != nil {
 		t.Fatal(err)
@@ -66,16 +66,13 @@ func TestNewRaftLogger(t *testing.T) {
 	if !bytes.Contains(data, []byte("etcd-logutil-2")) {
 		t.Fatalf("can't find data in log %q", string(data))
 	}
-	if !bytes.Contains(data, []byte("logutil/zap_raft_test.go:")) {
-		t.Fatalf("unexpected caller; %q", string(data))
-	}
 }
 
 func TestNewRaftLoggerFromZapCore(t *testing.T) {
 	buf := bytes.NewBuffer(nil)
 	syncer := zapcore.AddSync(buf)
 	cr := zapcore.NewCore(
-		zapcore.NewJSONEncoder(zap.NewProductionEncoderConfig()),
+		zapcore.NewJSONEncoder(zap.DefaultEncoderConf()),
 		syncer,
 		zap.NewAtomicLevelAt(zap.InfoLevel),
 	)

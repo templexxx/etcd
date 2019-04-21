@@ -16,9 +16,8 @@ package auth
 
 import (
 	"context"
+	"github.com/templexxx/zap"
 	"testing"
-
-	"go.uber.org/zap"
 )
 
 // TestSimpleTokenDisabled ensures that TokenProviderSimple behaves correctly when

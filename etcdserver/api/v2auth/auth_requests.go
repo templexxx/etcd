@@ -19,11 +19,11 @@ import (
 	"encoding/json"
 	"path"
 
-	"go.etcd.io/etcd/etcdserver"
-	"go.etcd.io/etcd/etcdserver/api/v2error"
-	"go.etcd.io/etcd/etcdserver/etcdserverpb"
+	"github.com/templexxx/etcd/etcdserver"
+	"github.com/templexxx/etcd/etcdserver/api/v2error"
+	"github.com/templexxx/etcd/etcdserver/etcdserverpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func (s *store) ensureAuthDirectories() error {

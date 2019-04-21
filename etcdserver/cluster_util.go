@@ -22,12 +22,12 @@ import (
 	"sort"
 	"time"
 
-	"go.etcd.io/etcd/etcdserver/api/membership"
-	"go.etcd.io/etcd/pkg/types"
-	"go.etcd.io/etcd/version"
+	"github.com/templexxx/etcd/etcdserver/api/membership"
+	"github.com/templexxx/etcd/pkg/types"
+	"github.com/templexxx/etcd/version"
 
 	"github.com/coreos/go-semver/semver"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // isMemberBootstrapped tries to check if the given member has been bootstrapped

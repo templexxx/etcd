@@ -26,13 +26,13 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/lease"
-	"go.etcd.io/etcd/mvcc/backend"
-	"go.etcd.io/etcd/mvcc/mvccpb"
-	"go.etcd.io/etcd/pkg/schedule"
-	"go.etcd.io/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/lease"
+	"github.com/templexxx/etcd/mvcc/backend"
+	"github.com/templexxx/etcd/mvcc/mvccpb"
+	"github.com/templexxx/etcd/pkg/schedule"
+	"github.com/templexxx/etcd/pkg/testutil"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func TestStoreRev(t *testing.T) {

@@ -27,19 +27,19 @@ import (
 	"sync"
 	"time"
 
-	"go.etcd.io/etcd/etcdserver"
-	"go.etcd.io/etcd/etcdserver/api/v3compactor"
-	"go.etcd.io/etcd/pkg/flags"
-	"go.etcd.io/etcd/pkg/netutil"
-	"go.etcd.io/etcd/pkg/srv"
-	"go.etcd.io/etcd/pkg/tlsutil"
-	"go.etcd.io/etcd/pkg/transport"
-	"go.etcd.io/etcd/pkg/types"
+	"github.com/templexxx/etcd/etcdserver"
+	"github.com/templexxx/etcd/etcdserver/api/v3compactor"
+	"github.com/templexxx/etcd/pkg/flags"
+	"github.com/templexxx/etcd/pkg/netutil"
+	"github.com/templexxx/etcd/pkg/srv"
+	"github.com/templexxx/etcd/pkg/tlsutil"
+	"github.com/templexxx/etcd/pkg/transport"
+	"github.com/templexxx/etcd/pkg/types"
 
 	"github.com/ghodss/yaml"
+	"github.com/templexxx/zap"
+	"github.com/templexxx/zap/zapcore"
 	bolt "go.etcd.io/bbolt"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
 	"golang.org/x/crypto/bcrypt"
 	"google.golang.org/grpc"
 )
@@ -301,6 +301,7 @@ type Config struct {
 	//  - "stdout" as os.Stdout,
 	//  - file path to append server logs to.
 	// It can be multiple when "Logger" is zap.
+	// for fBox, the len(LogOutPuts) is 1
 	LogOutputs []string `json:"log-outputs"`
 
 	// Debug is true, to enable debug level logging.

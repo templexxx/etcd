@@ -18,11 +18,11 @@ import (
 	"reflect"
 	"testing"
 
-	"go.etcd.io/etcd/pkg/types"
-	"go.etcd.io/etcd/version"
+	"github.com/templexxx/etcd/pkg/types"
+	"github.com/templexxx/etcd/version"
 
 	"github.com/coreos/go-semver/semver"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 var testLogger = zap.NewExample()

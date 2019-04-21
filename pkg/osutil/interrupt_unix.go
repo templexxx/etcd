@@ -22,7 +22,7 @@ import (
 	"sync"
 	"syscall"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // InterruptHandler is a function that is called on receiving a

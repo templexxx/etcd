@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
-	"go.etcd.io/etcd/etcdserver/api/v3rpc/rpctypes"
-	"go.etcd.io/etcd/pkg/testutil"
+	"github.com/templexxx/etcd/etcdserver/api/v3rpc/rpctypes"
+	"github.com/templexxx/etcd/pkg/testutil"
 
 	"google.golang.org/grpc"
 )
@@ -77,6 +77,19 @@ func TestDialCancel(t *testing.T) {
 		t.Fatalf("get failed to exit")
 	case <-getc:
 	}
+}
+
+func TestDial(t *testing.T) {
+	cfg := Config{
+		Endpoints:   []string{"254.0.0.1:12345"},
+		DialTimeout: 2 * time.Second,
+		DialOptions: []grpc.DialOption{grpc.WithBlock()},
+	}
+	_, err := New(cfg)
+	if err != nil {
+		t.Fatal(err)
+	}
+
 }
 
 func TestDialTimeout(t *testing.T) {

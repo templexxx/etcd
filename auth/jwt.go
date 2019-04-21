@@ -22,7 +22,7 @@ import (
 	"time"
 
 	jwt "github.com/dgrijalva/jwt-go"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 type tokenJWT struct {

@@ -19,8 +19,8 @@ import (
 	"net/url"
 	"os"
 
-	"go.etcd.io/etcd/pkg/expect"
-	"go.etcd.io/etcd/pkg/fileutil"
+	"github.com/templexxx/etcd/pkg/expect"
+	"github.com/templexxx/etcd/pkg/fileutil"
 )
 
 var (

@@ -19,10 +19,10 @@ import (
 	"os"
 	"time"
 
-	"go.etcd.io/etcd/functional/rpcpb"
-	"go.etcd.io/etcd/pkg/fileutil"
+	"github.com/templexxx/etcd/functional/rpcpb"
+	"github.com/templexxx/etcd/pkg/fileutil"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 // compactQPS is rough number of compact requests per second.

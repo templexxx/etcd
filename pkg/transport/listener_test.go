@@ -17,13 +17,12 @@ package transport
 import (
 	"crypto/tls"
 	"errors"
+	"github.com/templexxx/zap"
 	"io/ioutil"
 	"net/http"
 	"os"
 	"testing"
 	"time"
-
-	"go.uber.org/zap"
 )
 
 func createSelfCert() (*TLSInfo, func(), error) {

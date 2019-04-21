@@ -20,7 +20,7 @@ import (
 	"strings"
 
 	"github.com/coreos/go-systemd/daemon"
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func Main() {

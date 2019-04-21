@@ -1,4 +1,4 @@
-module go.etcd.io/etcd
+module github.com/templexxx/etcd
 
 require (
 	github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973 // indirect
@@ -30,8 +30,6 @@ require (
 	github.com/matttproud/golang_protobuf_extensions v1.0.0 // indirect
 	github.com/olekukonko/tablewriter v0.0.0-20170122224234-a0225b3f23b5
 	github.com/onsi/gomega v1.4.2 // indirect
-	github.com/pkg/errors v0.8.0 // indirect
-	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/prometheus/client_golang v0.8.0
 	github.com/prometheus/client_model v0.0.0-20170216185247-6f3806018612
 	github.com/prometheus/common v0.0.0-20180518154759-7600349dcfe1 // indirect
@@ -40,15 +38,13 @@ require (
 	github.com/soheilhy/cmux v0.1.4
 	github.com/spf13/cobra v0.0.3
 	github.com/spf13/pflag v1.0.1
-	github.com/stretchr/testify v1.2.2 // indirect
+	github.com/templexxx/zap v0.1.3-0.20190421180624-ae278569fa2c
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20170815181823-89b8d40f7ca8
 	github.com/ugorji/go/codec v0.0.0-20190204201341-e444a5086c43
 	github.com/urfave/cli v1.20.0
 	github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2
 	go.etcd.io/bbolt v1.3.2
 	go.uber.org/atomic v1.3.2 // indirect
-	go.uber.org/multierr v1.1.0 // indirect
-	go.uber.org/zap v1.9.1
 	golang.org/x/crypto v0.0.0-20180608092829-8ac0e0d97ce4
 	golang.org/x/net v0.0.0-20180906233101-161cd47e91fd
 	golang.org/x/time v0.0.0-20180412165947-fbb02b2291d2

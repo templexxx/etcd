@@ -19,13 +19,13 @@ import (
 	"os"
 	"time"
 
-	"go.etcd.io/etcd/etcdserver/api/snap"
-	"go.etcd.io/etcd/lease"
-	"go.etcd.io/etcd/mvcc"
-	"go.etcd.io/etcd/mvcc/backend"
-	"go.etcd.io/etcd/raft/raftpb"
+	"github.com/templexxx/etcd/etcdserver/api/snap"
+	"github.com/templexxx/etcd/lease"
+	"github.com/templexxx/etcd/mvcc"
+	"github.com/templexxx/etcd/mvcc/backend"
+	"github.com/templexxx/etcd/raft/raftpb"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func newBackend(cfg ServerConfig) backend.Backend {

@@ -17,7 +17,7 @@ package mvcc
 import (
 	"testing"
 
-	"go.uber.org/zap"
+	"github.com/templexxx/zap"
 )
 
 func BenchmarkIndexCompact1(b *testing.B)       { benchmarkIndexCompact(b, 1) }

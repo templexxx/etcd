@@ -15,8 +15,9 @@
 package logutil
 
 import (
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
+	"fmt"
+	"github.com/templexxx/zap"
+	"github.com/templexxx/zap/zapcore"
 	"google.golang.org/grpc/grpclog"
 )
 
@@ -24,82 +25,92 @@ import (
 // It discards all INFO level logging in gRPC, if debug level
 // is not enabled in "*zap.Logger".
 func NewGRPCLoggerV2(lcfg zap.Config) (grpclog.LoggerV2, error) {
-	lg, err := lcfg.Build(zap.AddCallerSkip(1)) // to annotate caller outside of "logutil"
+	lg, err := lcfg.Build() // to annotate caller outside of "logutil"
 	if err != nil {
 		return nil, err
 	}
-	return &zapGRPCLogger{lg: lg, sugar: lg.Sugar()}, nil
+	return &zapGRPCLogger{lg: lg}, nil
 }
 
 // NewGRPCLoggerV2FromZapCore creates "grpclog.LoggerV2" from "zap.Core"
-// and "zapcore.WriteSyncer". It discards all INFO level logging in gRPC,
+// It discards all INFO level logging in gRPC,
 // if debug level is not enabled in "*zap.Logger".
-func NewGRPCLoggerV2FromZapCore(cr zapcore.Core, syncer zapcore.WriteSyncer) grpclog.LoggerV2 {
-	// "AddCallerSkip" to annotate caller outside of "logutil"
-	lg := zap.New(cr, zap.AddCaller(), zap.AddCallerSkip(1), zap.ErrorOutput(syncer))
-	return &zapGRPCLogger{lg: lg, sugar: lg.Sugar()}
+func NewGRPCLoggerV2FromZapCore(cr zapcore.Core) grpclog.LoggerV2 {
+	lg := zap.New(cr)
+	return &zapGRPCLogger{lg: lg}
 }
 
 type zapGRPCLogger struct {
 	lg    *zap.Logger
-	sugar *zap.SugaredLogger
 }
 
 func (zl *zapGRPCLogger) Info(args ...interface{}) {
 	if !zl.lg.Core().Enabled(zapcore.DebugLevel) {
 		return
 	}
-	zl.sugar.Info(args...)
+	msg := fmt.Sprint(args...)
+	zl.lg.Info(msg)
 }
 
 func (zl *zapGRPCLogger) Infoln(args ...interface{}) {
 	if !zl.lg.Core().Enabled(zapcore.DebugLevel) {
 		return
 	}
-	zl.sugar.Info(args...)
+	msg := fmt.Sprint(args...)
+	zl.lg.Info(msg)
 }
 
 func (zl *zapGRPCLogger) Infof(format string, args ...interface{}) {
 	if !zl.lg.Core().Enabled(zapcore.DebugLevel) {
 		return
 	}
-	zl.sugar.Infof(format, args...)
+	msg := fmt.Sprintf(format, args...)
+	zl.lg.Info(msg)
 }
 
 func (zl *zapGRPCLogger) Warning(args ...interface{}) {
-	zl.sugar.Warn(args...)
+	msg := fmt.Sprint(args...)
+	zl.lg.Warn(msg)
 }
 
 func (zl *zapGRPCLogger) Warningln(args ...interface{}) {
-	zl.sugar.Warn(args...)
+	msg := fmt.Sprint(args...)
+	zl.lg.Warn(msg)
 }
 
 func (zl *zapGRPCLogger) Warningf(format string, args ...interface{}) {
-	zl.sugar.Warnf(format, args...)
+	msg := fmt.Sprintf(format, args...)
+	zl.lg.Warn(msg)
 }
 
 func (zl *zapGRPCLogger) Error(args ...interface{}) {
-	zl.sugar.Error(args...)
+	msg := fmt.Sprint(args...)
+	zl.lg.Error(msg)
 }
 
 func (zl *zapGRPCLogger) Errorln(args ...interface{}) {
-	zl.sugar.Error(args...)
+	msg := fmt.Sprint(args...)
+	zl.lg.Error(msg)
 }
 
 func (zl *zapGRPCLogger) Errorf(format string, args ...interface{}) {
-	zl.sugar.Errorf(format, args...)
+	msg := fmt.Sprintf(format, args...)
+	zl.lg.Error(msg)
 }
 
 func (zl *zapGRPCLogger) Fatal(args ...interface{}) {
-	zl.sugar.Fatal(args...)
+	msg := fmt.Sprint(args...)
+	zl.lg.Fatal(msg)
 }
 
 func (zl *zapGRPCLogger) Fatalln(args ...interface{}) {
-	zl.sugar.Fatal(args...)
+	msg := fmt.Sprint(args...)
+	zl.lg.Fatal(msg)
 }
 
 func (zl *zapGRPCLogger) Fatalf(format string, args ...interface{}) {
-	zl.sugar.Fatalf(format, args...)
+	msg := fmt.Sprintf(format, args...)
+	zl.lg.Fatal(msg)
 }
 
 func (zl *zapGRPCLogger) V(l int) bool {

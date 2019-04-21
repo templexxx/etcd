@@ -27,8 +27,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/templexxx/etcd/pkg/pathutil"
 	"github.com/ugorji/go/codec"
-	"go.etcd.io/etcd/pkg/pathutil"
 )
 
 const (
