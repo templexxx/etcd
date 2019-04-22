@@ -79,19 +79,6 @@ func TestDialCancel(t *testing.T) {
 	}
 }
 
-func TestDial(t *testing.T) {
-	cfg := Config{
-		Endpoints:   []string{"254.0.0.1:12345"},
-		DialTimeout: 2 * time.Second,
-		DialOptions: []grpc.DialOption{grpc.WithBlock()},
-	}
-	_, err := New(cfg)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-}
-
 func TestDialTimeout(t *testing.T) {
 	defer testutil.AfterTest(t)
 

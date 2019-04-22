@@ -44,6 +44,7 @@ func (c *Client) unaryClientInterceptor(logger *zap.Logger, optFuncs ...retryOpt
 			return invoker(ctx, method, req, reply, cc, grpcOpts...)
 		}
 		var lastErr error
+
 		for attempt := uint(0); attempt < callOpts.max; attempt++ {
 			if err := waitRetryBackoff(ctx, attempt, callOpts); err != nil {
 				return err
